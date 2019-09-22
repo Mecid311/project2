@@ -140,16 +140,3 @@ var siteCarousel = function () {
     });
   }
 
-  $('.slide-one-item').owlCarousel({
-    center: false,
-    items: 1,
-    loop: true,
-    stagePadding: 0,
-    margin: 0,
-    autoplay: true,
-    pauseOnHover: false,
-    nav: true,
-    navText: ['<i class="fas fa-arrow-left"></i>', ' <i class="fas fa-arrow-right"></i>']
-  });
-};
-siteCarousel();
