@@ -684,3 +684,57 @@ font-size: 1.1rem;
   }
   
 }
+/* --------------------------------------- */
+/* checkout */
+
+
+.bg-light a{
+  text-decoration: none;
+  color: #930077;
+}
+.bg-light a:hover{
+  text-decoration: none;
+  color: #6d0058;
+}
+.form-control {
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.border1{
+  border: 1px solid #a6a6a6;
+  max-width: 500px;
+}
+.border1 a{
+  text-decoration: none;
+  color: #930077;
+}
+
+.border1 a:hover{
+  text-decoration: none;
+  color: #6d0058;
+}
+/* ----------------------------------------------- */
+/* thanks */
+.site-section-check i{
+  font-size: 4rem;
+  color: #8bc34a;
+} 
+/* -------------------------------------- */
+/* bottle */
+.page-title-wrap{
+  background-color: #6d0058;
+}
+.page-title-wrap h1 {
+  color: #fff;
+  font-style: 4rem;
+  font-weight: 100;
+}
+.bg-light1{
+background-color: #60004e;
+}
+/*  */
