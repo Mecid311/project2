@@ -29,6 +29,10 @@ var siteCarousel = function () {
 }
 siteCarousel();
 
+// video
+$(".js-modal-btn").modalVideo({channel:'vimeo'});
+
+// -----------------------
 //Responsive menu toogler
 
 $("#menu_toogler").click(function(){
@@ -73,22 +77,78 @@ siteCarousel();
 
 var sitePlusMinus = function() {
   $('.js-btn-minus').on('click', function(e){
-    e.preventDefault();
-   
-    if ( $(this).closest('.input-group').find('.form-control').val() != 0 ) {
-      $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
-    } else {
-      $(this).closest('.input-group').find('.form-control').val(parseInt(0));
-    }
+   var val=$(this).closest('.input-group').find('.form-control').val();
+   if(val>1)
+   val--;
+
+   $(this).closest('.input-group').find('.form-control').val(val);
+    // if ( $(this).closest('.input-group').find('.form-control').val() != 0 ) {
+    //   $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
+    // } else {
+    //   $(this).closest('.input-group').find('.form-control').val(parseInt(0));
+    // }
   });
   $('.js-btn-plus').on('click', function(e){
-    e.preventDefault();
-    if($(this).closest('.input-group').find('.form-control').val()<10){
-      $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
-    }
-    else{
-      $(this).closest('.input-group').find('.form-control').val(parseInt(0));
-    }
+    
+    var val=$(this).closest('.input-group').find('.form-control').val();
+   if(val<9)
+    val++;
+    console.log(val);
+    $(this).closest('.input-group').find('.form-control').val(val);
+    // if($(this).closest('.input-group').find('.form-control').val()<10){
+    //   $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
+    // }
+    // else{
+    //   $(this).closest('.input-group').find('.form-control').val(parseInt(0));
+    // }
   });
 };
 sitePlusMinus();
+
+
+// -------------------
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+
+
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display == "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+var colll = document.getElementsByClassName("collapsible1");
+var i;
+
+for (i = 0; i < colll.length; i++) {
+  colll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display == "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+  
