@@ -812,3 +812,23 @@ header nav ul .menu_list_item.active {
   display: none;
   text-align: center;
 }
+/* scrolll */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #fff; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(148,190,233,1) 100%);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(238,174,202);
+}
+
